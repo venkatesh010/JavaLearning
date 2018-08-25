@@ -1,0 +1,26 @@
+Question is mind:
+1)Does python have an enums ? why we need at first place
+yes
+
+Learning:
+1)Whenever we have a group of constants under a same umbrella we can declare an enum with those set of constants
+2)We can also have methods, variables, constructor inside enum, we can use it to make enumerated data types
+3)Every constant in enum is a static final object of enum type
+
+Why we went to final and string discussion becuase we had a read that we cannot have child enums as constants in a enum becuase enum constants are final
+points:
+4)Declaring a class final means you dont want anyone to change it, you want a fix set of immmutable behaviour so you declare it as final
+https://docs.oracle.com/javase/tutorial/java/IandI/final.html
+5)Strings are immutable to make efficient use of memory by using string constant pool which has multiple references pointing to one String Object
+https://www.quora.com/Why-String-class-declared-as-immutable-final
+
+6)enums extend to java.lang.Enum so they cannot extend any other class but they can implement interfaces
+7)enum constructors are public, why?
+cause they are not explicitly called, they are invoked for each and every constant declaration so it is not exposed to users to call it.
+8)enum cannot have abstract methods since we cannot create a child enum which implements it as it is already extending to java.lang.ENUM
+9)Even a class cannot extend an enum because it is like a final class(Having a private constructor so cannot be invoked in subclass by super())
+10)https://www.youtube.com/watch?time_continue=1061&v=1612Ngij7_c
+
+
+why use enums?
+https://stackoverflow.com/questions/4709175/what-are-enums-and-why-are-they-useful
