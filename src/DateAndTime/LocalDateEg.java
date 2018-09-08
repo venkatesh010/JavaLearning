@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
+import java.util.ArrayList;
 
 public class LocalDateEg {
     public static void main(String[] args) {
@@ -13,5 +14,8 @@ public class LocalDateEg {
         //Period period = Period.between(localDateBefore, localDateAfter);   // Used for LocalDate
         Duration duration = Duration.between(localDateAfter,localDateBefore);   // Used for LocalDateTime and LocalTime
         System.out.println(duration);
+        LocalDate date = LocalDate.of(2017,2,27);
+        System.out.println(date.plus(Period.ofDays(3)));
+
     }
 }
